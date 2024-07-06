@@ -1,6 +1,6 @@
 
 import './App.css'
-import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AppLayout from './layouts/app-layout'
 import Home from "./pages/home"
 import Category from './pages/category'
@@ -38,11 +38,7 @@ const router=createBrowserRouter([
 
 function App() {
 
-  return (
-    <>
-      <div>hello world!</div>
-    </>
-  )
+  return <RouterProvider router={router}/>
 }
 
 export default App
