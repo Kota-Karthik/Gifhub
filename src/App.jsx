@@ -1,49 +1,48 @@
-
-import './App.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import AppLayout from './layouts/app-layout'
-import Home from "./pages/home"
-import Category from './pages/category'
-import Favorites from './pages/favourites'
-import Search from './pages/search'
-import GifPage from './pages/single-gif'
-import GifProvider from './context/gif-context'
+import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import "./App.css";
+import AppLayout from "./layouts/app-layout";
+import Home from "./pages/home";
+import GifProvider from "./context/gif-context";
+import SearchPage from "./pages/search";
+import Category from "./pages/category";
+import GifPage from "./pages/single-gif";
+import Favorites from "./pages/favourites";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/:category',
-        element: <Category />,
-      },
-      {
-        path: '/search/:query',
-        element: <Search />,
-      },
-      {
-        path: '/:type/:slug',
+        path: "/:type/:slug",
         element: <GifPage />,
       },
       {
-        path: '/favourites',
+        path: "/:category",
+        element: <Category />,
+      },
+      {
+        path: "/search/:query",
+        element: <SearchPage />,
+      },
+      {
+        path: "/favorites",
         element: <Favorites />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
-function App() {
+const App = () => {
   return (
     <GifProvider>
       <RouterProvider router={router} />
     </GifProvider>
-  )
+  );
+};
 
-}
-
-export default App
+export default App;
