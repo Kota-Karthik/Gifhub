@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import { GifState } from "../context/git-context";
+import {GifState} from "../context/gif-context";
 import {useParams} from "react-router-dom";
 import Gif from "../components/gif";
-import FilterGif from "../components/filtergif";
+import FilterGif from "../components/filter-gif";
 
 const SearchPage = () => {
   const [searchResults, setSearchResults] = useState([]);

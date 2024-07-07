@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import {useState} from "react";
 import {HiMiniXMark, HiOutlineMagnifyingGlass} from "react-icons/hi2";
 import {useNavigate} from "react-router-dom";

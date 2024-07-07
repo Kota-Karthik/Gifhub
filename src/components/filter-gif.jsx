@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
+
 import {HiMiniArrowTrendingUp} from "react-icons/hi2";
-import { GifState } from "../context/git-context";
+import {GifState} from "../context/gif-context";
 
 const filters = [
   {
